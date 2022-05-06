@@ -35,14 +35,14 @@ class Relationship(models.Model):
 class Post(models.Model):
     description = models.CharField(max_length=255, blank=True)
     username = models.ForeignKey(User, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='images',blank=True)
+    image = models.ImageField(upload_to='images',blank=True) #Uploading to images folder, blank true means that they don't have to have an image
     date_posted = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.description
 
 class Comment(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE) #Post is the name of the entity/model
     username = models.ForeignKey(User, related_name='details', on_delete=models.CASCADE)
     text = models.CharField(max_length=200)
     date_added = models.DateTimeField(auto_now_add=True,blank=True)

@@ -1,0 +1,24 @@
+{% extends "FeedApp/base.html" %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h2>
+    <p>New Post:</p>
+</h2>
+
+
+<form action="{% url 'FeedApp:new_post' %}" method='post' enctype='multipart/form-data'>
+    <!--It is important to include the enctype property in the form tag for the uploaded file to be attached
+    to the request properly. TO ATTACH IMAGE/FILES-->
+
+    {% csrf_token %}
+    {% bootstrap_form form %}
+
+    <br><br>
+    <button name="submit" class="btn btn-outline-primary">Post</button>
+</form>
+
+
+
+{% endblock content %}

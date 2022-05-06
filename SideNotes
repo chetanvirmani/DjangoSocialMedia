@@ -1,0 +1,5 @@
+Steps of building pages for our project 
+1. URLs.py file where we will enter the path
+2. Building the views
+3. Building the templates
+# Its all under FeedApp
