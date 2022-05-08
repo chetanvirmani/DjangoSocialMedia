@@ -38,7 +38,7 @@ def profile(request):
         form = ProfileForm(instance = profile, data = request.POST)
         if form.is_valid():
             form.save()
-            return redirect('FeedApp:profile')
+            return redirect('FeedApp:friends')
     
     context = {'form':form}
 
