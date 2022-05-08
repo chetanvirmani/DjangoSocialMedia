@@ -4,6 +4,7 @@
 
 <html lang="en">
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1,
@@ -14,6 +15,12 @@
     {% bootstrap_javascript jquery='full' %}
 
 </head>
+<style>
+    body {
+        background: whitesmoke url("images/background.png") no-repeat;
+    }
+</style>
+
 
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light mb-4 border">
@@ -35,6 +42,14 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'FeedApp:myfeed' %}">My Feed</a>
+                    <!--Here the source is myfeed.html-->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'FeedApp:friendsfeed' %}">Friend's Feed</a>
+                    <!--Here the source is myfeed.html-->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'FeedApp:friends' %}">Friend Requests</a>
                     <!--Here the source is myfeed.html-->
                 </li>
             </ul>
@@ -63,7 +78,7 @@
     </nav>
 
     <main role="main" class="container">
-        <div class="pb-2 mb-2 border-bottom">
+        <div>
             {% block page_header %}{% endblock page_header %}
         </div>
 
@@ -73,7 +88,6 @@
     </main>
 
 </body>
-
 
 
 

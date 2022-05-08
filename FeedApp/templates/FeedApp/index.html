@@ -1,12 +1,14 @@
 {% extends "FeedApp/base.html" %}
 
 {% block page_header %}
-    <div class="jumbotron">
-       <h1 class="display-3">Feed</h1>
-            <p class="lead">A Social Network where you can be you.
-            </p>
 
-            <a class="btn btn-lg btn-outline-primary" href="{% url 'users:register' %}"
-            role="button">Join Now &raquo;</a>
-    </div>
+<body>
+
+    <h1 class="display-2"><img src="images/logo.png"></h1> <br><br><br>
+    <p class="lead">Show off your most prideful moments because...</p>
+    <h4>Modesty is Overrated!</h4><br>
+
+
+    <a class="btn btn-lg btn-outline-primary" href="{% url 'users:register' %}" role="button">Join Now &raquo;</a>
+</body>
 {% endblock page_header %}
